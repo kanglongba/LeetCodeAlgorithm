@@ -4,6 +4,7 @@ package com.alibaba.edison;
  * 算法中常用的数据结构
  * 1.Stack
  * 2.HashMap
+ * 3.Deque -> LinkedList
  *
  *
  * 位运算
