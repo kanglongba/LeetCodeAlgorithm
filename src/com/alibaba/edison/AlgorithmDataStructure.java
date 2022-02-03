@@ -5,6 +5,7 @@ package com.alibaba.edison;
  * 1.Stack
  * 2.HashMap
  * 3.Deque -> LinkedList
+ * 4.LinkedHashMap，本质是HashMap，但是使用双向链表维持了元素的插入顺序，使遍历的时候，可以按插入顺序遍历。它内部还有一个头指针和尾指针。
  *
  *
  * 位运算

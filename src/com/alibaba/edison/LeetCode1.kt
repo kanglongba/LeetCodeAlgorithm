@@ -4,6 +4,7 @@ import java.util.*
 
 /**
  * 两数之和，easy
+ * 只想到排序法，未能想到最优解
  * author: qonyqian
  * created on: 2022/1/17 9:10 下午
  * version：1.0
