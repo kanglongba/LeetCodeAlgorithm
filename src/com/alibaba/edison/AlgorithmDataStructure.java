@@ -22,6 +22,10 @@ package com.alibaba.edison;
  * 符号位，1表示负数、0表示正数
  * 所有的移位运算，符号位都会跟着走，差别只是在补位的策略不同
  *
+ *
+ * 1.穷举：exhaustion
+ * 2.递归：recursion
+ *
  * author: qonyqian
  * created on: 2022/1/30 2:57 下午
  * version：1.0
