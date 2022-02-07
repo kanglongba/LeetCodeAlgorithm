@@ -6,6 +6,10 @@ package com.alibaba.edison;
  * 2.HashMap
  * 3.Deque -> LinkedList
  * 4.LinkedHashMap，本质是HashMap，但是使用双向链表维持了元素的插入顺序，使遍历的时候，可以按插入顺序遍历。它内部还有一个头指针和尾指针。
+ * 5.PriorityQueue，优先队列，最小堆/最大堆，元素按顺序排列，所以遍历时，也是按顺序遍历。默认是排序是从小到大，可以自定义 Comparator。
+ * offer/add添加元素；peek返回队列的头部元素，但是不出队；poll/remove返回并删除队列的头部元素。
+ * [优先队列（PriorityQueue）常用方法及简单案例](https://blog.csdn.net/m0_37602827/article/details/100172976)
+ * 6.PriorityBlockingQueue，线程安全版PriorityQueue，多线程环境，会阻塞其余线程
  *
  *
  * 位运算
