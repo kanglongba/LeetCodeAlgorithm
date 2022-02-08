@@ -10,6 +10,7 @@ package com.alibaba.edison;
  * offer/add添加元素；peek返回队列的头部元素，但是不出队；poll/remove返回并删除队列的头部元素。
  * [优先队列（PriorityQueue）常用方法及简单案例](https://blog.csdn.net/m0_37602827/article/details/100172976)
  * 6.PriorityBlockingQueue，线程安全版PriorityQueue，多线程环境，会阻塞其余线程
+ * 3.Queue(队列)->Deque(双端队列)->ArrayDeque，内部是数组
  *
  *
  * 位运算
