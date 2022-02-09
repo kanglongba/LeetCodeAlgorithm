@@ -1,0 +1,48 @@
+package com.alibaba.edison;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+/**
+ * 单词拆分，medium
+ * 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。请你判断是否可以利用字典中出现的单词拼接出 s 。
+ * 注意：不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。
+ * <p>
+ * 未能独立解答
+ * <p>
+ * author: qonyqian
+ * created on: 2022/2/9 10:31 下午
+ * version：1.0
+ * description:
+ */
+public class LeetCode139 {
+
+    /**
+     * 完全没有思路
+     * <p>
+     * 竟然是动态规划：https://leetcode-cn.com/problems/word-break/solution/dan-ci-chai-fen-by-leetcode-solution/
+     * <p>
+     * dp[i] 表示字符串 s 前 i 个字符组成的字符串 s[0..i-1] 是否能被空格拆分成若干个字典中出现的单词
+     * 状态转移方程：dp[i] = dp[j] && check(s[j..i−1])。
+     * j 的区间是[0,i-1]，所以 check(s[j..i−1]) 是一个循环遍历的过程，而dp[j]可以直接复用。
+     *
+     * @param s
+     * @param wordDict
+     * @return
+     */
+    public boolean wordBreak(String s, List<String> wordDict) {
+        Set<String> wordDictSet = new HashSet(wordDict);
+        boolean[] dp = new boolean[s.length() + 1]; //因为字符串的下标从0开始，所以dp长度是 [s.length() + 1]，方便边界处理
+        dp[0] = true;
+        for (int i = 1; i <= s.length(); i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && wordDictSet.contains(s.substring(j, i))) { //左闭右开
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[s.length()];
+    }
+}
