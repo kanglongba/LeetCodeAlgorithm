@@ -10,6 +10,8 @@ package com.alibaba.edison;
  *
  * 非常经典的一道题
  *
+ * 未能独立求得最优解
+ *
  * author: qonyqian
  * created on: 2022/2/11 10:45 下午
  * version：1.0
