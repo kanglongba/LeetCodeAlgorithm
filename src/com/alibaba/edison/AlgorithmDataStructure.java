@@ -10,7 +10,8 @@ package com.alibaba.edison;
  * offer/add添加元素；peek返回队列的头部元素，但是不出队；poll/remove返回并删除队列的头部元素。
  * [优先队列（PriorityQueue）常用方法及简单案例](https://blog.csdn.net/m0_37602827/article/details/100172976)
  * 6.PriorityBlockingQueue，线程安全版PriorityQueue，多线程环境，会阻塞其余线程
- * 3.Queue(队列)->Deque(双端队列)->ArrayDeque，内部是数组
+ * 7.Queue(队列)->Deque(双端队列)->ArrayDeque，内部是数组
+ * 8.Deque这个接口非常牛逼，同时包含了队列、双端队列和栈的方法。
  *
  *
  * 位运算
@@ -30,6 +31,10 @@ package com.alibaba.edison;
  *
  * 1.穷举：exhaustion
  * 2.递归：recursion
+ *
+ * 1.LeetCode Hot 100 ：https://leetcode-cn.com/problem-list/2cktkvj/
+ * 2.按出现频次对LeetCode上的题目进行排序：https://codetop.cc/home
+ * 3.[字节跳动最爱考的 64 道算法题](https://juejin.cn/post/6947842412102287373)
  *
  * author: qonyqian
  * created on: 2022/1/30 2:57 下午
