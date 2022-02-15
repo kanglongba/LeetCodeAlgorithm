@@ -1,6 +1,12 @@
 package com.alibaba.edison;
 
 /**
+ * 排序数组，medium
+ * 给你一个整数数组 nums，请你将该数组升序排列。
+ *
+ * 官方讲解排序算法：https://leetcode-cn.com/problems/sort-an-array/solution/pai-xu-shu-zu-by-leetcode-solution/
+ * 大神讲解排序算法：https://leetcode-cn.com/problems/sort-an-array/solution/fu-xi-ji-chu-pai-xu-suan-fa-java-by-liweiwei1419/
+ *
  * Created by 钧戈 on 2020/10/31.
  */
 public class LeetCode912 {
