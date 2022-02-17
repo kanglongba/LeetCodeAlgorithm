@@ -20,7 +20,7 @@ public class LeetCode279 {
      * https://leetcode-cn.com/problems/perfect-squares/solution/hua-jie-suan-fa-279-wan-quan-ping-fang-shu-by-guan/
      * dp[i]表示 和为 i 的完全平方数的最少数量，最差情况就是完全平方数都是 1，即dp[i]=i，如4 = 1 + 1 + 1 + 1。
      * 状态转移方程：
-     * 当前的n = i
+     * 当前的完全平方和 n = i
      * 如果使用j，此时 n = i - j * j，用了一个数所以个数就是dp[i - j*j] + 1;
      * 如果不使用j，此时dp[i]未发生变化，即还是dp[i]
      * 最终dp[i]为 第一步，第二步的最小值，即：dp[i] = min(dp[i], dp[i - j*j] + 1)

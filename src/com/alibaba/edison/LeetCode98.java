@@ -63,25 +63,6 @@ public class LeetCode98 {
     }
 
     /**
-     * 我的递归解决不了这个case：[5,4,6,null,null,3,7]
-     *
-     * @param root
-     * @return
-     */
-    public boolean recursion(TreeNode root) {
-        if (root == null) {
-            return true;
-        }
-        if (root.left != null && root.left.val >= root.val) {
-            return false;
-        }
-        if (root.right != null && root.right.val <= root.val) {
-            return false;
-        }
-        return recursion(root.left) && recursion(root.right);
-    }
-
-    /**
      * 官方递归代码：https://leetcode-cn.com/problems/validate-binary-search-tree/solution/yan-zheng-er-cha-sou-suo-shu-by-leetcode-solution/
      *
      * 添加了一个上限和下限，并且递归更新上下限

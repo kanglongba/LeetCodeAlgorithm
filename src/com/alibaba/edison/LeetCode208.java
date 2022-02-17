@@ -4,7 +4,22 @@ package com.alibaba.edison;
  * 实现 Trie (前缀树)，medium
  * Trie（发音类似 "try"）或者说 前缀树 是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。这一数据结构有相当多的应用情景，例
  * 如自动补完和拼写检查。
- * <p>
+ *
+ * 输入
+ * ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+ * [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+ * 输出
+ * [null, null, true, false, true, null, true]
+ *
+ * 解释
+ * Trie trie = new Trie();
+ * trie.insert("apple");
+ * trie.search("apple");   // 返回 True
+ * trie.search("app");     // 返回 False
+ * trie.startsWith("app"); // 返回 True
+ * trie.insert("app");
+ * trie.search("app");     // 返回 True
+ *
  * 完全没有思路，直接看答案吧：https://leetcode-cn.com/problems/implement-trie-prefix-tree/solution/shi-xian-trie-qian-zhui-shu-by-leetcode-ti500/
  * <p>
  * 未能独立解答。

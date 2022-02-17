@@ -10,6 +10,9 @@ package com.alibaba.edison;
  * 2.若任意节点的右子树不空，则右子树上所有节点的值均大于它的根节点的值；
  * 3.任意节点的左、右子树也分别为二叉查找树；
  *
+ * 输入：n = 3
+ * 输出：5
+ *
  * 未能独立解答
  *
  * author: qonyqian
@@ -23,6 +26,8 @@ public class LeetCode96 {
      * 二叉搜索树的中序遍历是升序的
      *
      * 感觉又是回溯法，探索所有可能。【卧槽，竟然是动态规划】
+     *
+     * 官方题解：https://leetcode-cn.com/problems/unique-binary-search-trees/solution/bu-tong-de-er-cha-sou-suo-shu-by-leetcode-solution/
      *
      * @param n
      * @return
