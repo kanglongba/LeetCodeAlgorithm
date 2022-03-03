@@ -21,7 +21,7 @@ public class LeetCode64 {
     /**
      * 凭直觉是动态规划
      * <p>
-     * dp[i][j] 表示 到达(i,j)的路径和
+     * dp[i][j] 表示 到达(i,j)的最小路径和
      * 状态转移方程：dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j] ，只能向下和向右移动
      *
      * @param grid

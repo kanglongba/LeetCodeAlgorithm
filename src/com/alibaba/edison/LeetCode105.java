@@ -4,6 +4,9 @@ package com.alibaba.edison;
  * 从前序与中序遍历序列构造二叉树，medium
  * 给定两个整数数组preorder 和 inorder，其中preorder 是二叉树的先序遍历， inorder是同一棵树的中序遍历，请构造二叉树并返回其根节点。
  *
+ * 输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+ * 输出: [3,9,20,null,null,15,7]
+ *
  * 很经典的一道二叉树题目
  *
  * author: qonyqian

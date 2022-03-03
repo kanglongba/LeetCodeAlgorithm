@@ -35,7 +35,7 @@ public class LeetCode103 {
         List<Integer> temp = new ArrayList<>();
         while (!one.isEmpty() || !two.isEmpty()) {
             while (!one.isEmpty()) {
-                TreeNode node = one.poll(); //从向右遍历，没什么可说的
+                TreeNode node = one.poll(); //从左向右遍历，没什么可说的
                 temp.add(node.val);
                 if (node.left != null) {
                     two.offer(node.left);

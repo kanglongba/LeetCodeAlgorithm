@@ -18,7 +18,7 @@ import java.util.PriorityQueue;
 public class LeetCode148 {
 
     /**
-     * 普通解：先排序，再
+     * 普通解：先排序，再组装成链表
      *
      * @param head
      * @return
