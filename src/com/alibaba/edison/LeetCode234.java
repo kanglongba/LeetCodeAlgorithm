@@ -1,5 +1,8 @@
 package com.alibaba.edison;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 回文链表，easy
  * 给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。如果是，返回 true ；否则，返回 false 。
@@ -66,4 +69,34 @@ public class LeetCode234 {
         }
         return slow;
     }
+
+    /**
+     * 把链表装入数组，然后分别从头尾遍历数组
+     * 官方答案：https://leetcode-cn.com/problems/palindrome-linked-list/solution/hui-wen-lian-biao-by-leetcode-solution/
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome2(ListNode head) {
+        List<Integer> vals = new ArrayList<Integer>();
+
+        // 将链表的值复制到数组中
+        ListNode currentNode = head;
+        while (currentNode != null) {
+            vals.add(currentNode.val);
+            currentNode = currentNode.next;
+        }
+
+        // 使用双指针判断是否回文
+        int front = 0;
+        int back = vals.size() - 1;
+        while (front < back) {
+            if (!vals.get(front).equals(vals.get(back))) {
+                return false;
+            }
+            front++;
+            back--;
+        }
+        return true;
+    }
+
 }

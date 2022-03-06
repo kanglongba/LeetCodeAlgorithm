@@ -80,12 +80,6 @@ public class LeetCode647 {
      * 我们可以推断出长度为 n 的字符串会生成 2n-1 组回文中心 [l_i, r_i]。这样我们只要从 0 到 2n - 2 遍历 i，就可以得到所有可能的回文中心，这样就把奇数长度和
      * 偶数长度两种情况统一起来了。
      *
-     * 作者：LeetCode-Solution
-     * 链接：https://leetcode-cn.com/problems/palindromic-substrings/solution/hui-wen-zi-chuan-by-leetcode-solution/
-     * 来源：力扣（LeetCode）
-     * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-     *
-     *
      * @param s
      * @return
      */

@@ -1,5 +1,6 @@
 package com.alibaba.edison;
 
+import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -68,13 +69,23 @@ public class LeetCode739 {
         Deque<Integer> stack = new LinkedList<Integer>(); //存储下标。Deque很牛逼，同时具有Queue、Stack 和 双端队列 的接口方法。
         for (int i = 0; i < length; i++) {
             int temperature = temperatures[i];
-            while (!stack.isEmpty() && temperature > temperatures[stack.peek()]) { // 遇到更大的元素，不符合单调递减，
+            // 这里有一个特别需要注意的地方，LinkedList当作Stack用时，它是在队头出栈和入栈，即pop把队头出栈，push把元素插入队头。
+            // 这里的peek方法同时兼容了Stack和Queue，它取第一个元素。我猜正是为了使peek能同时兼容Stack和Queue，才会安排LinkedList在
+            // 队头入栈（push）和出栈（pop）。
+            while (!stack.isEmpty() && temperature > temperatures[stack.peek()]) { // 遇到更大的元素，不符合单调递减。
                 int prevIndex = stack.pop();     // 把元素出栈，直到满足单调递减特性。
                 ans[prevIndex] = i - prevIndex;
             }
             stack.push(i); //维护单调递减的栈
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        LeetCode739 leet = new LeetCode739();
+        int[] temperatures = new int[] {80,73,74,75,71,69,72,76,73};
+        int[] ans = leet.dailyTemperaturesStack(temperatures);
+        System.out.println("args = " + Arrays.toString(ans));
     }
 
 }

@@ -12,6 +12,7 @@ package com.alibaba.edison;
  * 6.PriorityBlockingQueue，线程安全版PriorityQueue，多线程环境，会阻塞其余线程
  * 7.Queue(队列)->Deque(双端队列)->ArrayDeque，内部是数组
  * 8.Deque这个接口非常牛逼，同时包含了队列、双端队列和栈的方法。
+ * 9.LinkedList实现了Deque接口，但是LinkedList当作Stack用时，它是在队头入栈和出栈，即pop方法把队头出栈，push方法把元素加入队头。
  *
  *
  * 位运算

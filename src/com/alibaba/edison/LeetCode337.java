@@ -36,7 +36,7 @@ public class LeetCode337 {
      * dp2(root)表示不选中这个节点的偷盗最大值
      *
      * 状态转移方程：
-     * dp1(root) = dp2(left) + dp2(right)，选中了root，那么左右子树都不能选中
+     * dp1(root) = dp2(left) + dp2(right) + root，选中了root，那么左右子树都不能选中
      * dp2(root) = max(dp1(left), dp2(left)) + max(dp1(right), dp2(right))，未选中root，那么左右子树可以被选中，也可以不被选中
      *
      * max = max(dp1(root), dp2(root))
