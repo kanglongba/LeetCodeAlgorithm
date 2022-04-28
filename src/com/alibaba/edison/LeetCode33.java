@@ -9,6 +9,9 @@ package com.alibaba.edison;
  *
  * 给你 旋转后 的数组 nums 和一个整数 target ，如果 nums 中存在这个目标值 target ，则返回它的下标，否则返回-1。
  *
+ * 输入：nums = [4,5,6,7,0,1,2], target = 0
+ * 输出：4
+ *
  * author: qonyqian
  * created on: 2022/2/7 1:10 下午
  * version：1.0
