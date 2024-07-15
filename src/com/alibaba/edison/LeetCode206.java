@@ -33,4 +33,22 @@ public class LeetCode206 {
         }
         return pre;
     }
+
+    /**
+     * 二刷
+     * @param head
+     * @return
+     */
+    public ListNode reverseList2(ListNode head) {
+        ListNode pre = new ListNode(0);
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode temp = pre.next;
+            ListNode next = curr.next;
+            pre.next = curr;
+            curr.next = temp;
+            curr = next;
+        }
+        return pre.next;
+    }
 }
