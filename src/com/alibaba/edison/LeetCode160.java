@@ -15,7 +15,7 @@ package com.alibaba.edison;
 public class LeetCode160 {
 
     /**
-     * 两个指针遍历，遍历一遍以后，交换路径再次遍历，如果有交点，那么两个指针一定会相遇，并且相遇的点就是焦点
+     * 两个指针遍历，遍历一遍以后，交换路径再次遍历，如果有交点，那么两个指针一定会相遇，并且相遇的点就是交点
      * @param headA
      * @param headB
      * @return
