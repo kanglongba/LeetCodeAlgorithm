@@ -6,15 +6,15 @@ package com.alibaba.edison;
  * 回文字符串 是正着读和倒过来读一样的字符串。
  * 子字符串 是字符串中的由连续字符组成的一个序列。
  * 具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被视作不同的子串。
- *
+ * <p>
  * 输入：s = "aaa"
  * 输出：6
  * 解释：6个回文子串: "a", "a", "a", "aa", "aa", "aaa"
- *
+ * <p>
  * 跟LeetCode5是同类型题目
- *
+ * <p>
  * 未能独立解答
- *
+ * <p>
  * author: qonyqian
  * created on: 2022/2/15 5:49 下午
  * version：1.0
@@ -55,7 +55,7 @@ public class LeetCode647 {
                 }
             }
         }
-        int ans  = 0;
+        int ans = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (dp[i][j]) {
@@ -69,14 +69,14 @@ public class LeetCode647 {
     /**
      * 中心拓展法
      * 官方代码：https://leetcode-cn.com/problems/palindromic-substrings/solution/hui-wen-zi-chuan-by-leetcode-solution/
-     *
+     * <p>
      * 计算有多少个回文子串的最朴素方法就是枚举出所有的回文子串，而枚举出所有的回文字串又有两种思路，分别是：
      * 1.枚举出所有的子串，然后再判断这些子串是否是回文；
      * 2.枚举每一个可能的回文中心，然后用两个指针分别向左右两边拓展，当两个指针指向的元素相同的时候就拓展，否则停止拓展。
      * 我们选择第二种方法来枚举所有的回文子串。
      * 在实现的时候，我们需要处理一个问题，即如何有序地枚举所有可能的回文中心，我们需要考虑回文长度是奇数和回文长度是偶数的两种情况。如果回文长度是奇数，那么回文
      * 中心是一个字符；如果回文长度是偶数，那么中心是两个字符。当然你可以做两次循环来分别枚举奇数长度和偶数长度的回文，但是我们也可以用一个循环搞定。
-     *
+     * <p>
      * 我们可以推断出长度为 n 的字符串会生成 2n-1 组回文中心 [l_i, r_i]。这样我们只要从 0 到 2n - 2 遍历 i，就可以得到所有可能的回文中心，这样就把奇数长度和
      * 偶数长度两种情况统一起来了。
      *
@@ -86,7 +86,8 @@ public class LeetCode647 {
     public int countSubstrings2(String s) {
         int n = s.length(), ans = 0;
         for (int i = 0; i < 2 * n - 1; ++i) {
-            int l = i / 2, r = i / 2 + i % 2;
+            int l = i / 2;
+            int r = l + i % 2;
             while (l >= 0 && r < n && s.charAt(l) == s.charAt(r)) {
                 --l;
                 ++r;
@@ -94,5 +95,33 @@ public class LeetCode647 {
             }
         }
         return ans;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public int countSubstrings3(String s) {
+
+        return 0;
     }
 }

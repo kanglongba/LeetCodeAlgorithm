@@ -89,4 +89,30 @@ public class LeetCode3 {
         }
         return max;
     }
+
+    /**
+     * 最长无重复字符子串
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring3(String s) {
+        if(s == null) {
+            return 0;
+        }
+        int left = 0, right = 0;
+        int max = 0;
+        HashSet<Character> values = new HashSet<>();
+        while(left <= right && right < s.length()) {
+            char value = s.charAt(right);
+            if(values.contains(value)) {
+                values.remove(s.charAt(left));
+                left++;
+            } else {
+                values.add(value);
+                right++;
+                max = Math.max(max, values.size());
+            }
+        }
+        return max;
+    }
 }
